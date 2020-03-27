@@ -5,7 +5,7 @@
 }
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +15,9 @@ body {
 
 #container {
     width: 480px;
-    height: 700px;
-    background-color: rgba(170, 151, 135, 0.74);
+    height: 90%;
+    /* background-color: rgba(170, 151, 135, 0.74); */
+    background-color: black;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -39,6 +40,14 @@ body {
     position: relative;
 }
 
+#memory {
+    position: absolute;
+    top: 10px;
+    font-size: 0.7rem;
+    right: 20px;
+    font-weight: bold;
+}
+
 #screen p {
     /* direction: rtl; */
     font-size: 4em;
@@ -57,7 +66,7 @@ body {
 #keypad {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1px 5px;
+    grid-gap: 7px 5px;
     padding: 10px 0;
     margin: 0 auto;
     height: 100%;
@@ -94,4 +103,74 @@ body {
     grid-column-end: 5;
     background-color: rgb(62, 63, 63);
     color: #fcfcfc;
+}
+
+@media (max-width: 400px) {
+    #container {
+        width: 380px;
+        /* height: 50%; */
+    }
+
+    #parent {
+        height: 100%;
+        width: 95%;
+    }
+
+    #screen {
+        height: 100px;
+    }
+
+    #screen p {
+        /* direction: rtl; */
+        font-size: 2rem;
+    }
+
+    #keypad {
+        grid-gap: 4px 6px;
+        padding: 8px 0;
+        height: 100%;
+        width: 90%;
+        /* border: 1px solid red; */
+    }
+
+    .keys {
+        /* width: 90px; */
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 810px) {
+    #container {
+        width: 400px;
+        height: 50%;
+    }
+
+    /* #parent {
+        height: 100%;
+        width: 95%;
+    } */
+
+    #screen {
+        height: 120px;
+    }
+
+    #screen p {
+        /* direction: rtl; */
+        font-size: 3rem;
+    }
+
+    #keypad {
+        grid-gap: 10px 10px;
+        padding: 10px 0;
+        height: 100%;
+        width: 90%;
+        /* border: 1px solid red; */
+    }
+
+    .keys {
+        /* width: 90px; */
+        height: 70px;
+        /* font-size: 1.5rem; */
+    }
 }
